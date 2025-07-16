@@ -7,14 +7,18 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueDevTools(),
-    tailwindcss(),
-  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        chakra: ['"Chakra Petch"', 'sans-serif'],
+        jost: ['"Jost"', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [vue(), vueDevTools(), tailwindcss()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
 })
