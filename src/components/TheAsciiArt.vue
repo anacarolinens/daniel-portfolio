@@ -51,7 +51,10 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div ref="asciiContainer" class="relative w-full overflow-hidden h-auto lg:h-[860px]">
+  <div
+    ref="asciiContainer"
+    class="relative w-full overflow-hidden h-[627px] md:h-[860px] lg:h-[860px]"
+  >
     <!-- Centraliza vertical e horizontalmente -->
     <div class="absolute inset-0 flex items-center justify-center px-4">
       <div class="flex flex-col items-center text-center space-y-[4px]">
