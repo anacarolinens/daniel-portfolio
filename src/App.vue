@@ -1,6 +1,7 @@
 <script setup>
 import TheAbout from './components/TheAbout.vue'
 import TheAsciiArt from './components/TheAsciiArt.vue'
+import TheExperience from './components/TheExperience.vue'
 import TheFooter from './components/TheFooter.vue'
 import TheHeader from './components/TheHeader.vue'
 </script>
@@ -10,6 +11,7 @@ import TheHeader from './components/TheHeader.vue'
   <main>
     <TheAsciiArt />
     <TheAbout />
+    <TheExperience />
   </main>
   <TheFooter />
 </template>
