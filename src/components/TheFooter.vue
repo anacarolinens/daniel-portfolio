@@ -20,9 +20,7 @@
         <div class="flex flex-col items-start w-full lg:w-auto">
           <!-- Email + ícone -->
           <div class="flex flex-wrap items-center gap-4">
-            <h2
-              class="uppercase text-xl sm:text-2xl md:text-4xl lg:text-[64px] font-normal break-all"
-            >
+            <h2 class="uppercase text-xl sm:text-2xl md:text-4xl lg:text-[64px] font-normal">
               carlosdanielbau@gmail.com
             </h2>
             <svg
