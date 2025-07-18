@@ -14,7 +14,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
 const isLarge = computed(() => windowWidth.value >= 1265)
 const headingSize = computed(() => {
   if (windowWidth.value < 768) return 40
-  if (windowWidth.value < 1265) return 64
+  if (windowWidth.value < 1465) return 64
   return 130
 })
 
@@ -30,24 +30,22 @@ const points = [
     <div v-if="!isLarge" class="w-full mb-10 p-0">
       <img :src="expArea2" alt="Experiência alternativa" class="w-full h-auto object-contain" />
     </div>
-    <div v-else class="w-[890px] mb-10 p-0">
+    <div v-else class="w-[990px] mb-10 p-0">
       <img :src="expArea" alt="Experiência" class="w-full h-auto max-h-[766px] object-contain" />
     </div>
 
-    <div class="flex justify-center md:justify-start items-center w-full md:pl-[89px] mb-8">
+    <div class="flex justify-center md:justify-start items-center w-full md:pl-[69px] mb-8">
       <h2
         :style="{ fontSize: headingSize + 'px' }"
-        class="font-chakra font-bold text-black uppercase leading-none tracking-tight text-center md:text-left"
+        class="font-chakra font-bold text-black uppercase leading-none tracking-tight text-center md:text-left ml-10 px-8"
       >
         EXPERIÊNCIAS DE MERCADO
       </h2>
     </div>
   </section>
 
-  <div class="mt-8 flex justify-center px-4">
-    <div class="w-[962px]">
-      <TheExperienceList :points="points" />
-    </div>
+  <div class="mt-8 flex justify-center">
+    <TheExperienceList :points="points" />
   </div>
 </template>
 
