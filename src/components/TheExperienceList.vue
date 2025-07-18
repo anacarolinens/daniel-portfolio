@@ -1,5 +1,5 @@
 <script setup>
-import pointIcon from '../assets/image/point.png'
+import pointIcon from '../assets/image/point.svg'
 const { points } = defineProps({
   points: {
     type: Array,
