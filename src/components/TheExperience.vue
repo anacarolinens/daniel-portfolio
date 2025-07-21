@@ -30,16 +30,18 @@ const points = [
     <div v-if="!isLarge" class="w-full mb-10 p-0">
       <img :src="expArea2" alt="Experiência alternativa" class="w-full h-auto object-contain" />
     </div>
-    <div v-else class="w-[990px] mb-10 p-0">
+    <div v-else class="w-[1020px] mb-10 p-0">
       <img :src="expArea" alt="Experiência" class="w-full h-auto max-h-[766px] object-contain" />
     </div>
 
-    <div class="flex justify-center md:justify-start items-center w-full md:pl-[69px] mb-8">
+    <div
+      class="flex justify-center md:justify-start items-center w-full pl-2 md:pl-4 lg:pl-18 mb-8"
+    >
       <h2
-        :style="{ fontSize: headingSize + 'px' }"
-        class="font-chakra font-bold text-black uppercase leading-none tracking-tight text-center md:text-left ml-10 px-8"
+        class="font-chakra font-bold text-black uppercase mb-6 sm:mb-8 md:mb-12 text-[40px] sm:text-[64px] md:text-[130px] leading-none tracking-tight sm:tracking-[-0.02em] md:tracking-[-0.03em]"
       >
-        EXPERIÊNCIAS DE MERCADO
+        EXPERIÊNCIAS <br />
+        DE MERCADO
       </h2>
     </div>
   </section>
