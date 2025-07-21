@@ -30,8 +30,7 @@ import TheProjectList from './TheProjectList.vue'
       <div class="w-full flex items-center space-x-0.5 justify-center md:justify-start">
         <span class="w-1.5 h-16 bg-[var(--primary-bg)] flex-shrink-0"></span>
         <a
-          href="/pdf/curriculo-daniel.pdf"
-          download="curriculo-daniel.pdf"
+          href=""
           class="relative overflow-hidden uppercase flex items-center gap-2 h-16 px-6 bg-[linear-gradient(to_right,var(--primary-bg)_50%,var(--primary-bg)_50%,var(--primary-blue)_50%,var(--primary-blue)_50%)] bg-[length:200%_100%] bg-right text-[var(--primary-text)] hover:bg-left transition-all duration-1000 ease-in-out whitespace-nowrap"
         >
           <span class="font-semibold text-[16px]">Veja mais aqui</span>
