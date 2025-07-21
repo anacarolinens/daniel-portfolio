@@ -12,7 +12,7 @@
           class="w-full lg:w-auto flex justify-center lg:justify-start mt-[40px] md:mt-[60px] lg:mt-[163px]"
         >
           <img
-            src="../assets/image/logo.svg"
+            src="../../assets/image/logo.svg"
             alt="Logo"
             class="w-[clamp(8rem,16vw,16rem)] lg:w-[258.99px] lg:h-[342.79px] h-auto lg:ml-[-40px]"
           />

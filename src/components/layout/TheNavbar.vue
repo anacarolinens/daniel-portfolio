@@ -33,7 +33,7 @@ const toggleMenu = () => {
           <a href="#">
             <img
               class="w-[34px] h-[45px] transform -translate-y-1"
-              src="../assets/image/logo.svg"
+              src="../../assets/image/logo.svg"
               alt="Logo"
             />
           </a>

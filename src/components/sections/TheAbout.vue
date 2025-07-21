@@ -6,14 +6,14 @@
   >
     <!-- Imagem decorativa esquerda só a partir de 1465px -->
     <img
-      src="../assets/image/about-l.svg"
+      src="../../assets/image/about-l.svg"
       alt="Decor Left"
       class="hidden min-[1465px]:block absolute left-[60px] top-0 h-full w-[124px] object-contain"
     />
 
     <!-- Imagem decorativa direita só a partir de 1465px -->
     <img
-      src="../assets/image/about-r.svg"
+      src="../../assets/image/about-r.svg"
       alt="Decor Right"
       class="hidden min-[1465px]:block absolute right-[60px] top-0 h-full w-[221px] object-contain"
     />
@@ -21,7 +21,7 @@
     <!-- LOGO -->
     <div class="mb-4 sm:mb-6 md:mb-12 mt-8 sm:mt-10 md:mt-12">
       <img
-        src="../assets/image/logo-about.svg"
+        src="../../assets/image/logo-about.svg"
         alt="Logo estilizada"
         class="w-[200px] sm:w-[260px] md:w-[317px] mx-auto"
       />

@@ -1,8 +1,8 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
-import expArea from '../assets/image/exp-area.png'
-import expArea2 from '../assets/image/exp-area-2.png'
-import TheExperienceList from './TheExperienceList.vue'
+import expArea from '../../assets/image/exp-area.png'
+import expArea2 from '../../assets/image/exp-area-2.png'
+import TheExperienceList from '../lists/TheExperienceList.vue'
 
 const windowWidth = ref(window.innerWidth)
 function handleResize() {

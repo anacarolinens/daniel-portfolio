@@ -6,7 +6,7 @@
       <!-- Projeto 1 (sempre visível) -->
       <li class="rounded-lg overflow-hidden drop-shadow-xl/25 w-full max-w-[576px] max-h-[585px]">
         <img
-          src="../assets/image/project-01.svg"
+          src="../../assets/image/project-01.svg"
           alt="Projeto 1"
           class="w-full h-auto object-cover"
         />
@@ -21,7 +21,7 @@
         ]"
       >
         <img
-          src="../assets/image/project-02.svg"
+          src="../../assets/image/project-02.svg"
           alt="Projeto 2"
           class="w-full h-full object-cover"
         />
@@ -36,7 +36,7 @@
         ]"
       >
         <img
-          src="../assets/image/project-03.svg"
+          src="../../assets/image/project-03.svg"
           alt="Projeto 3"
           class="w-full h-full object-cover"
         />
@@ -52,7 +52,7 @@
         ]"
       >
         <img
-          src="../assets/image/project-04.svg"
+          src="../../assets/image/project-04.svg"
           alt="Projeto 4"
           class="w-full h-full object-cover"
         />

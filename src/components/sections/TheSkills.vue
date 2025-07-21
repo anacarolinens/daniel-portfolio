@@ -1,8 +1,8 @@
 <script setup>
-import AdobeIco from '../assets/image/logo-adobe.svg'
-import UiIco from '../assets/image/logo-ui.svg'
-import FigmaIco from '../assets/image/logo-figma.svg'
-import UxIco from '../assets/image/logo-ux.svg'
+import AdobeIco from '../../assets/image/logo-adobe.svg'
+import UiIco from '../../assets/image/logo-ui.svg'
+import FigmaIco from '../../assets/image/logo-figma.svg'
+import UxIco from '../../assets/image/logo-ux.svg'
 
 const skills = [
   {
@@ -65,7 +65,7 @@ const skills = [
         class="relative overflow-hidden uppercase flex items-center gap-2 h-[64px] px-6 bg-[linear-gradient(to_right,var(--primary-bg)_50%,var(--primary-bg)_50%,var(--primary-blue)_50%,var(--primary-blue)_50%)] bg-[length:200%_100%] bg-right text-[var(--primary-text)] hover:text-[var(--primary-text)] hover:bg-left transition-all duration-1000 ease-in-out whitespace-nowrap"
       >
         <img
-          src="../assets/image/download.svg"
+          src="../../assets/image/download.svg"
           alt="ícone download"
           class="w-[19px] h-[21px] flex-shrink-0"
         />
