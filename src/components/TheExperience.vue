@@ -19,8 +19,8 @@ const headingSize = computed(() => {
 })
 
 const points = [
-  'Choose from a roster of cybernetic mercenaries with unique abilities. Customize your Runners playstyle with the weapons, implants, and equipment you collect on your runs. Strategize, execute, and become Tau Ceti’s most feared mercenary.',
-  'Choose from a roster of cybernetic mercenaries with unique abilities. Customize your Runners playstyle with the weapons, implants, and equipment you collect on your runs. Strategize, execute, and become Tau Ceti’s most feared mercenary.',
+  'Atuei durante um ano no desenvolvimento de landing pages para uma agência de vendas de produtos, sendo responsável por toda a estrutura do site, incluindo o design visual e a adaptação para dispositivos móveis. Meu trabalho envolvia desde o layout até a otimização da experiência do usuário.',
+  'Trabalhei de forma autônoma por mais de três anos, desenvolvendo layouts para sites e aplicativos mobile. Nesse período, fui responsável pela criação de interfaces intuitivas e visualmente atrativas, sempre buscando alinhar usabilidade, identidade visual e objetivos do projeto.',
 ]
 </script>
 

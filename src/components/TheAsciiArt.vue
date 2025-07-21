@@ -13,11 +13,23 @@ onMounted(() => {
     let canvasWidth = window.innerWidth
     let canvasHeight = asciiContainer.value.clientHeight
 
+    // Guardar propagação de ondas
+    let waves = []
+
+    const hexToRgb = (hex) => {
+      const parsedHex = hex.replace('#', '')
+      const bigint = parseInt(parsedHex, 16)
+      const r = (bigint >> 16) & 255
+      const g = (bigint >> 8) & 255
+      const b = bigint & 255
+      return { r, g, b }
+    }
+
     p.setup = () => {
       p.createCanvas(canvasWidth, canvasHeight).parent(asciiContainer.value)
       p.textFont('monospace', w)
       p.textAlign(p.CENTER, p.CENTER)
-      p.frameRate(10)
+      p.frameRate(30)
     }
 
     p.windowResized = () => {
@@ -26,16 +38,49 @@ onMounted(() => {
       p.resizeCanvas(canvasWidth, canvasHeight)
     }
 
+    // Registrar posição do mouse para iniciar uma "onda"
+    p.mouseMoved = () => {
+      waves.push({
+        x: p.mouseX,
+        y: p.mouseY,
+        radius: 0,
+        maxRadius: 400,
+      })
+    }
+
     p.draw = () => {
       p.background(0)
+
+      const baseColor = getComputedStyle(asciiContainer.value)
+        .getPropertyValue('--ascii-art')
+        .trim()
+      const { r, g, b } = hexToRgb(baseColor)
+
+      // Atualiza ondas
+      waves.forEach((wave) => {
+        wave.radius += 8 // velocidade da onda
+      })
+
+      // Remove ondas que passaram do máximo
+      waves = waves.filter((wave) => wave.radius < wave.maxRadius)
+
       for (let y = 0; y < p.height; y += w) {
         for (let x = 0; x < p.width; x += w) {
           let n = p.noise(x * 0.008, y * 0.008, p.frameCount * 0.005)
           let brightness = n * 255
           let idx = p.floor(p.map(brightness, 0, 255, chars.length - 1, 0))
-          const color = getComputedStyle(asciiContainer.value).getPropertyValue('--ascii-art')
-          p.stroke(color)
-          p.fill(color)
+
+          let alpha = 50
+          waves.forEach((wave) => {
+            let d = p.dist(x, y, wave.x, wave.y)
+            let diff = Math.abs(d - wave.radius)
+            if (diff < 40) {
+              alpha = p.map(diff, 0, 40, 255, 100)
+            }
+          })
+
+          p.noStroke()
+          p.fill(`rgba(${r}, ${g}, ${b}, ${alpha / 255})`)
           p.text(chars[idx], x + w / 2, y + w / 2)
         }
       }

@@ -4,6 +4,7 @@ import TheAsciiArt from './components/TheAsciiArt.vue'
 import TheExperience from './components/TheExperience.vue'
 import TheFooter from './components/TheFooter.vue'
 import TheHeader from './components/TheHeader.vue'
+import TheProjects from './components/TheProjects.vue'
 import TheSkills from './components/TheSkills.vue'
 </script>
 
@@ -14,6 +15,7 @@ import TheSkills from './components/TheSkills.vue'
     <TheAbout />
     <TheExperience />
     <TheSkills />
+    <TheProjects />
   </main>
   <TheFooter />
 </template>

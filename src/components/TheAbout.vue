@@ -29,7 +29,7 @@
 
     <!-- TÍTULO -->
     <h2
-      class="font-chakra font-bold text-black uppercase mb-6 sm:mb-8 md:mb-12 text-[40px] sm:text-[64px] md:text-[130px] leading-none tracking-tight sm:tracking-[-0.02em] md:tracking-[-0.03em]"
+      class="font-chakra px-2 font-bold text-black uppercase mb-6 sm:mb-8 md:mb-12 text-[40px] sm:text-[64px] md:text-[130px] leading-none tracking-tight sm:tracking-[-0.02em] md:tracking-[-0.03em]"
     >
       QUEM SOU EU
     </h2>

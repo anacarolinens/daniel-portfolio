@@ -36,14 +36,18 @@ const skills = [
 <template>
   <section class="relative py-12">
     <div class="border-t border-[var(--line-color)] w-4/5 mx-auto mb-8"></div>
-    <div class="flex flex-wrap md:justify-center lg:justify-center items-center gap-12 px-4">
-      <div v-for="(skill, i) in skills" :key="i" class="flex items-center gap-4 mb-4">
+    <div class="flex flex-wrap justify-center items-center gap-12 px-4">
+      <div
+        v-for="(skill, i) in skills"
+        :key="i"
+        class="flex items-center gap-4 mb-4 w-full sm:w-auto justify-center sm:justify-start duration-400 transition-transform hover:scale-115"
+      >
         <img :src="skill.icon" :alt="skill.name" class="w-[37px] h-[37px] flex-shrink-0" />
-        <div class="flex flex-col leading-none">
-          <span class="text-[34.35px] leading-none mb-2 text-[var(---primary-textcolor)]">
+        <div class="flex flex-col justify-center leading-none">
+          <span class="text-[25px] font-semibold mb-1 text-[var(--primary-textcolor)]">
             {{ skill.name }}
           </span>
-          <span class="text-[12.99px] text-[var(---primary-textcolor)]">
+          <span class="text-[10px] text-[var(--primary-textcolor)]">
             {{ skill.level }}
           </span>
         </div>
@@ -56,7 +60,8 @@ const skills = [
     <div class="flex items-center space-x-0.5">
       <span class="w-[6px] h-[64px] bg-[var(--primary-bg)] flex-shrink-0"></span>
       <a
-        href="/seu-cv.pdf"
+        href="/pdf/curriculo-daniel.pdf"
+        download="curriculo-daniel.pdf"
         class="relative overflow-hidden uppercase flex items-center gap-2 h-[64px] px-6 bg-[linear-gradient(to_right,var(--primary-bg)_50%,var(--primary-bg)_50%,var(--primary-blue)_50%,var(--primary-blue)_50%)] bg-[length:200%_100%] bg-right text-[var(--primary-text)] hover:text-[var(--primary-text)] hover:bg-left transition-all duration-1000 ease-in-out whitespace-nowrap"
       >
         <img
