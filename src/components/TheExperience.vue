@@ -12,11 +12,6 @@ onMounted(() => window.addEventListener('resize', handleResize))
 onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
 
 const isLarge = computed(() => windowWidth.value >= 1265)
-const headingSize = computed(() => {
-  if (windowWidth.value < 768) return 40
-  if (windowWidth.value < 1465) return 64
-  return 130
-})
 
 const points = [
   'Atuei durante um ano no desenvolvimento de landing pages para uma agência de vendas de produtos, sendo responsável por toda a estrutura do site, incluindo o design visual e a adaptação para dispositivos móveis. Meu trabalho envolvia desde o layout até a otimização da experiência do usuário.',
