@@ -2,6 +2,7 @@
 
 <template>
   <section
+    id="sobre"
     class="relative flex flex-col items-center justify-center text-center px-8 sm:px-10 md:px-0 py-12 sm:py-16 md:py-24 bg-white overflow-hidden min-h-[auto] md:min-h-[1465px]"
   >
     <!-- Imagem decorativa esquerda só a partir de 1465px -->

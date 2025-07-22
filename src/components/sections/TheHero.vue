@@ -97,6 +97,7 @@ onBeforeUnmount(() => {
 
 <template>
   <div
+    id="inicio"
     ref="asciiContainer"
     class="relative w-full overflow-hidden h-[627px] md:h-[860px] lg:h-[860px]"
   >

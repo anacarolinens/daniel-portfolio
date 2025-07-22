@@ -44,7 +44,7 @@ function onCardClick(project) {
 </script>
 
 <template>
-  <section class="px-4 sm:px-8 py-12 mt-10">
+  <section id="area-projeto" class="px-4 sm:px-8 py-12 mt-10">
     <!-- Header -->
     <header class="mb-6 flex items-center">
       <h2 class="text-[36px] font-bold uppercase">

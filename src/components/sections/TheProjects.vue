@@ -3,7 +3,7 @@ import TheProjectList from '../lists/TheProjectList.vue'
 </script>
 
 <template>
-  <section class="py-12">
+  <section id="projetos" class="py-12">
     <!-- Preview -->
     <div class="w-full mb-15 mt-20 lg:px-10 md:px-8 px-12">
       <TheProjectList />
@@ -26,11 +26,10 @@ import TheProjectList from '../lists/TheProjectList.vue'
         criados com fins de estudo e demonstração das minhas habilidades e conhecimentos.
       </p>
 
-      <!-- Botão Veja mais aqui -->
       <div class="w-full flex items-center space-x-0.5 justify-center md:justify-start">
         <span class="w-1.5 h-16 bg-[var(--primary-bg)] flex-shrink-0"></span>
-        <a
-          href=""
+        <router-link
+          to="/project-area"
           class="relative overflow-hidden uppercase flex items-center gap-2 h-16 px-6 bg-[linear-gradient(to_right,var(--primary-bg)_50%,var(--primary-bg)_50%,var(--primary-blue)_50%,var(--primary-blue)_50%)] bg-[length:200%_100%] bg-right text-[var(--primary-text)] hover:bg-left transition-all duration-1000 ease-in-out whitespace-nowrap"
         >
           <span class="font-semibold text-[16px]">Veja mais aqui</span>
@@ -44,7 +43,7 @@ import TheProjectList from '../lists/TheProjectList.vue'
             <path d="M3 1H1V16H3" stroke="currentColor" stroke-width="1.5" />
             <path d="M19 1H21V16H19" stroke="currentColor" stroke-width="1.5" />
           </svg>
-        </a>
+        </router-link>
       </div>
     </div>
   </section>

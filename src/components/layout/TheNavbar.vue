@@ -1,12 +1,18 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
 
 const isMenuOpen = ref(false)
+const router = useRouter()
 
 const handleResize = () => {
   if (window.innerWidth >= 1024) {
     isMenuOpen.value = false
   }
+}
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
 }
 
 onMounted(() => {
@@ -17,33 +23,44 @@ onUnmounted(() => {
   window.removeEventListener('resize', handleResize)
 })
 
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
+const navigateAndScroll = async (sectionId) => {
+  if (window.location.pathname !== '/') {
+    await router.push('/')
+  }
+
+  // Espera o DOM carregar completamente
+  requestAnimationFrame(() => {
+    const el = document.getElementById(sectionId)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
+  })
 }
 </script>
 
 <template>
   <nav
+    id="navbar"
     class="bg-[var(--primary-bg)] text-[var(--primary-text)] w-full border-b border-[var(--primary-text)] relative font-bold"
   >
     <div class="w-full px-4 lg:px-16">
       <div class="flex items-center justify-between h-[64px]">
         <!-- Logo -->
         <div class="flex items-center gap-2">
-          <a href="#">
+          <a href="#" @click.prevent="navigateAndScroll('topo')">
             <img
               class="w-[34px] h-[45px] transform -translate-y-1"
               src="../../assets/image/logo.svg"
               alt="Logo"
             />
           </a>
-          <span class="text-xl uppercase text-[22px]">Daniel Ba[ú]</span>
+          <span class="text-xl uppercase text-[22px]">Daniel Baú</span>
         </div>
 
         <!-- Desktop Links -->
         <div class="hidden lg:flex items-center">
-          <a
-            href="#projetos"
+          <button
+            @click="navigateAndScroll('projetos')"
             class="flex items-center px-8 border-l border-[var(--primary-text)] uppercase hover:text-[var(--primary-bg)] hover:bg-[var(--primary-text)] transition duration-500 gap-2 h-[64px]"
           >
             <span>Projetos</span>
@@ -59,9 +76,9 @@ const toggleMenu = () => {
               <path d="M3 1H1V16H3" stroke="currentColor" stroke-width="1.5" />
               <path d="M19 1H21V16H19" stroke="currentColor" stroke-width="1.5" />
             </svg>
-          </a>
-          <a
-            href="#experiencias"
+          </button>
+          <button
+            @click="navigateAndScroll('experiencias')"
             class="flex items-center px-8 border-l border-[var(--primary-text)] uppercase hover:text-[var(--primary-bg)] hover:bg-[var(--primary-text)] transition duration-500 gap-2 h-[64px]"
           >
             <span>Experiências</span>
@@ -77,9 +94,9 @@ const toggleMenu = () => {
               <path d="M3 1H1V16H3" stroke="currentColor" stroke-width="1.5" />
               <path d="M19 1H21V16H19" stroke="currentColor" stroke-width="1.5" />
             </svg>
-          </a>
-          <a
-            href="#sobre"
+          </button>
+          <button
+            @click="navigateAndScroll('sobre')"
             class="flex items-center px-8 border-l border-r border-[var(--primary-text)] uppercase hover:text-[var(--primary-bg)] hover:bg-[var(--primary-text)] transition duration-500 gap-2 h-[64px]"
           >
             <span>Sobre Mim</span>
@@ -95,13 +112,15 @@ const toggleMenu = () => {
               <path d="M3 1H1V16H3" stroke="currentColor" stroke-width="1.5" />
               <path d="M19 1H21V16H19" stroke="currentColor" stroke-width="1.5" />
             </svg>
-          </a>
+          </button>
         </div>
 
         <!-- Desktop Contact -->
         <div class="hidden lg:block ml-4 border-l-4 border-[var(--primary-text)] pl-1">
           <a
-            href="#contato"
+            href="https://www.linkedin.com/in/danielbaudesigner"
+            target="_blank"
+            rel="noopener noreferrer"
             class="relative overflow-hidden uppercase px-12 py-2 h-[64px] flex items-center gap-2 bg-[linear-gradient(to_right,var(--primary-text)_50%,var(--primary-text)_50%,var(--primary-blue)_50%,var(--primary-blue)_50%)] bg-[length:200%_100%] bg-right text-[var(--primary-text)] hover:text-[var(--primary-bg)] hover:bg-left transition-all duration-1000 ease-in-out whitespace-nowrap"
           >
             <span>Contato</span>
@@ -165,24 +184,29 @@ const toggleMenu = () => {
       v-if="isMenuOpen"
       class="lg:hidden absolute top-[64px] right-0 w-full bg-[var(--primary-bg)] shadow-lg text-[var(--primary-text)] border-t border-[var(--primary-text)] z-50"
     >
-      <a
-        href="#projetos"
-        class="block px-8 py-4 hover:bg-gray-200 transition hover:text-[var(--primary-bg)]"
-        >Projetos</a
+      <button
+        @click="navigateAndScroll('projetos')"
+        class="block w-full text-left px-8 py-4 hover:bg-gray-200 transition hover:text-[var(--primary-bg)]"
       >
-      <a
-        href="#experiencias"
-        class="block px-8 py-4 hover:bg-gray-200 transition hover:text-[var(--primary-bg)]"
-        >Experiências</a
+        Projetos
+      </button>
+      <button
+        @click="navigateAndScroll('experiencias')"
+        class="block w-full text-left px-8 py-4 hover:bg-gray-200 transition hover:text-[var(--primary-bg)]"
       >
-      <a
-        href="#sobre"
-        class="block px-8 py-4 hover:bg-gray-200 transition hover:text-[var(--primary-bg)]"
-        >Sobre Mim</a
+        Experiências
+      </button>
+      <button
+        @click="navigateAndScroll('sobre')"
+        class="block w-full text-left px-8 py-4 hover:bg-gray-200 transition hover:text-[var(--primary-bg)]"
       >
+        Sobre Mim
+      </button>
       <div class="border-t border-[var(--primary-text)]">
         <a
-          href="#contato"
+          href="https://www.linkedin.com/in/danielbaudesigner"
+          target="_blank"
+          rel="noopener noreferrer"
           class="block px-8 py-4 bg-[var(--primary-blue)] hover:bg-blue-800 text-white transition"
         >
           Contato
@@ -191,5 +215,3 @@ const toggleMenu = () => {
     </div>
   </nav>
 </template>
-
-<style scoped></style>

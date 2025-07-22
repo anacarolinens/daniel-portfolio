@@ -3,7 +3,7 @@ import TheNavbar from './TheNavbar.vue'
 </script>
 
 <template>
-  <header>
+  <header id="header">
     <TheNavbar />
   </header>
 </template>

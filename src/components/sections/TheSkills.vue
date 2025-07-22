@@ -34,7 +34,7 @@ const skills = [
 </script>
 
 <template>
-  <section class="relative py-12">
+  <section id="habilidades" class="relative py-12">
     <div class="border-t border-[var(--line-color)] w-4/5 mx-auto mb-8"></div>
     <div class="flex flex-wrap justify-center items-center gap-12 px-4">
       <div

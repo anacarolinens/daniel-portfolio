@@ -21,7 +21,7 @@ const points = [
 
 <template>
   <!-- Imagem + Título -->
-  <section :class="isLarge ? 'flex flex-row w-full' : 'flex flex-col w-full'">
+  <section id="experiencias" :class="isLarge ? 'flex flex-row w-full' : 'flex flex-col w-full'">
     <div v-if="!isLarge" class="w-full mb-10 p-0">
       <img :src="expArea2" alt="Experiência alternativa" class="w-full h-auto object-contain" />
     </div>
