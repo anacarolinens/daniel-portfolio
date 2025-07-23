@@ -1,14 +1,14 @@
 <script setup>
-
+import TheFooter from './components/layout/TheFooter.vue'
+import TheHeader from './components/layout/TheHeader.vue'
 </script>
 
 <template>
-  <header>
-  </header>
+  <TheHeader />
+
   <main>
+    <router-view />
   </main>
 
+  <TheFooter />
 </template>
-
-<style scoped>
-</style>
