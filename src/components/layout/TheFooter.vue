@@ -53,9 +53,9 @@
           <ul
             class="flex flex-col text-[clamp(1rem,2vw,1.375rem)] font-medium space-y-[16px] md:space-y-[24px] lg:space-y-[40px] mb-[24px] md:mb-[40px] lg:mb-[110px]"
           >
-            <li><a href="#projects" class="hover:underline">Projetos</a></li>
-            <li><a href="#experience" class="hover:underline">Experiências</a></li>
-            <li><a href="#about" class="hover:underline">Sobre mim</a></li>
+            <li><a href="#projetos" class="hover:underline">Projetos</a></li>
+            <li><a href="#experiencias" class="hover:underline">Experiências</a></li>
+            <li><a href="#sobre" class="hover:underline">Sobre mim</a></li>
           </ul>
 
           <!-- Rodapé -->
