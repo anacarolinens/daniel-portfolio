@@ -1,8 +1,8 @@
 # 💼 Daniel – Portfólio Pessoal
 
-Site moderno, responsivo e funcional criado com o objetivo de apresentar os projetos, habilidades e experiências do designer **Daniel**.
+Site moderno, responsivo e funcional criado com o objetivo de apresentar os projetos, habilidades e experiências do designer **Daniel Baú**.
 
-> 🎨 **O design do projeto foi desenvolvido inteiramente por Daniel.**  
+> 🎨 **O design do projeto foi desenvolvido inteiramente por Daniel Baú.**  
 > 💻 A codificação e implementação foram realizadas por Ana Caroline.
 
 ---
@@ -119,7 +119,7 @@ daniel-portfolio/
 
 ## 👨‍🎨 Criação
 
-- **Design:** Daniel
+- **Design:** Daniel Baú
 - **Desenvolvimento e codificação:** Ana Caroline ([@anacarolinens](https://github.com/anacarolinens))
 
 ---
