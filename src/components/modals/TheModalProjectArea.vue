@@ -10,6 +10,7 @@ const props = defineProps({
 
 const emit = defineEmits(['close'])
 
+// Bloqueia o scroll do body enquanto o modal estiver aberto
 onMounted(() => document.body.classList.add('overflow-hidden'))
 onBeforeUnmount(() => document.body.classList.remove('overflow-hidden'))
 </script>
@@ -19,9 +20,9 @@ onBeforeUnmount(() => document.body.classList.remove('overflow-hidden'))
   <div class="fixed inset-0 bg-black/50 z-50" @click.self="emit('close')">
     <!-- modal container -->
     <div
-      class="absolute top-[77px] left-0 right-0 bottom-0 bg-white overflow-hidden shadow-2xl w-full"
+      class="absolute top-[77px] left-0 right-0 bottom-0 bg-white shadow-2xl w-full flex flex-col"
     >
-      <!-- botão flutuante fixo-->
+      <!-- botão flutuante -->
       <button
         @click="emit('close')"
         class="fixed bottom-2 sm:bottom-4 md:bottom-6 lg:bottom-[32px] right-2 sm:right-4 md:right-6 lg:right-[48px] mb-2 sm:mb-4 md:mb-6 lg:mb-[65px] mr-2 sm:mr-4 md:mr-6 lg:mr-[55px] z-50 w-10 sm:w-12 md:w-14 lg:w-[65px] h-10 sm:h-12 md:h-14 lg:h-[65px] bg-[var(--primary-blue)] flex items-center justify-center shadow-lg bg-[linear-gradient(to_right,var(--primary-bg)_50%,var(--primary-bg)_50%,var(--primary-blue)_50%,var(--primary-blue)_50%)] bg-[length:200%_100%] bg-right text-[var(--primary-text)] hover:bg-left transition-all duration-1000 ease-in-out whitespace-nowrap"
@@ -39,10 +40,11 @@ onBeforeUnmount(() => document.body.classList.remove('overflow-hidden'))
       </button>
 
       <!-- conteúdo com rolagem -->
-      <div class="p-8 overflow-auto h-full">
+      <div class="p-8 overflow-y-auto grow">
         <!-- ícone -->
         <img :src="props.project.icon" alt="" class="w-[37.92px] h-[41px] mb-6 mt-8" />
 
+        <!-- título e data -->
         <div
           class="flex flex-col items-center text-center space-y-2 mt-[40px] sm:mt-[80px] md:mt-[120px] lg:mt-[180px] mb-[24px] sm:mb-[48px] md:mb-[96px] lg:mb-[152px]"
         >
@@ -57,7 +59,8 @@ onBeforeUnmount(() => document.body.classList.remove('overflow-hidden'))
             {{ props.project.title }}
           </h2>
         </div>
-        <!-- imagem do projeto -->
+
+        <!-- imagem principal -->
         <div
           class="mx-auto overflow-hidden drop-shadow-xl/25 rounded-lg w-full"
           :class="`lg:w-[${props.project.imgWidth}] lg:h-[${props.project.imgHeight}]`"
@@ -69,7 +72,7 @@ onBeforeUnmount(() => document.body.classList.remove('overflow-hidden'))
           />
         </div>
 
-        <!-- Parágrafo dinâmico -->
+        <!-- descrição -->
         <p
           v-if="props.project.description"
           class="text-[20px] sm:text-[30px] md:text-[40px] lg:text-[50px] leading-snug mt-8 sm:mt-10 md:mt-16 mb-12 sm:mb-16 md:mb-24 max-w-[90%] mx-auto text-center"
@@ -77,7 +80,7 @@ onBeforeUnmount(() => document.body.classList.remove('overflow-hidden'))
           {{ props.project.description }}
         </p>
 
-        <!-- Imagem inferior -->
+        <!-- imagem inferior -->
         <div v-if="props.project.imageL">
           <img
             :src="props.project.imageL"
@@ -98,5 +101,13 @@ onBeforeUnmount(() => document.body.classList.remove('overflow-hidden'))
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+</style>
+
+<style>
+body.overflow-hidden {
+  overflow: hidden !important;
+  position: relative;
+  height: 100vh;
 }
 </style>
