@@ -187,7 +187,7 @@ function nextPhrase() {
 }
 
 // Troca automática a cada 2s para ficar mais rápida
-setInterval(nextPhrase, 800)
+setInterval(nextPhrase, 1800)
 </script>
 
 <template>
